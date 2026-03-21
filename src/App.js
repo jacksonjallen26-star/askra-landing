@@ -26,7 +26,7 @@ function App() {
           ✦ AI-powered customer support for small businesses
         </div>
         <h1>Your business,<br /><span>answered instantly</span></h1>
-        <p>Askra gives your website a smart chatbot that knows everything about your business. Upload your documents, customize your bot, and go live in minutes.</p>
+        <p>Askra gives your website an AI-powered customer service focused chatbot that learns and uses any information you provide. Upload your documents, customize your bot, and go live in minutes.</p>
         <div className="hero-cta">
           <a href="https://app.askra.app/register" className="btn btn-primary">Start for free</a>
           <a href="#how-it-works" className="btn btn-ghost">See how it works</a>
@@ -89,12 +89,12 @@ function App() {
           <div className="step">
             <div className="step-number">02</div>
             <h3>Upload your knowledge</h3>
-            <p>Upload PDFs, manuals, FAQs, or any documents. Askra learns everything about your business instantly.</p>
+            <p>Upload PDFs of manuals, FAQs, or any type of text information. Askra learns everything about your business instantly.</p>
           </div>
           <div className="step">
             <div className="step-number">03</div>
             <h3>Embed on your site</h3>
-            <p>Copy one line of code and paste it into your website. Your bot goes live immediately.</p>
+            <p>Copy a few small lines of code and paste it into your website. Your bot goes live immediately.</p>
           </div>
         </div>
       </section>
@@ -152,7 +152,7 @@ function App() {
                 </svg>
               </div>
               <h3>Easy Embed</h3>
-              <p>One line of code. Paste it anywhere — Squarespace, WordPress, Shopify, or custom sites. Works everywhere.</p>
+              <p>A few small lines of code. Paste it anywhere — Squarespace, WordPress, Shopify, or custom sites. Works everywhere.</p>
             </div>
             <div className="feature">
               <div className="feature-icon">
@@ -180,12 +180,11 @@ function App() {
             <div className="pricing-price">$0<span>/mo</span></div>
             <div className="pricing-desc">Perfect for trying Askra out</div>
             <ul className="pricing-features">
-              <li>50 messages per month</li>
+              <li>100 messages per month</li>
               <li>1 PDF upload</li>
               <li>Basic customization</li>
-              <li>Conversation history</li>
             </ul>
-            <a href="https://app.askra.app/login" className="btn btn-ghost">Get started free</a>
+            <a href="https://app.askra.app/register" className="btn btn-ghost">Get started free</a>
           </div>
 
           <div className="pricing-card featured">
@@ -194,13 +193,12 @@ function App() {
             <div className="pricing-price">$29<span>/mo</span></div>
             <div className="pricing-desc">For small businesses ready to grow</div>
             <ul className="pricing-features">
-              <li>500 messages per month</li>
-              <li>5 PDF uploads</li>
+              <li>5,000 messages per month</li>
+              <li>10 PDF uploads</li>
               <li>Full brand customization</li>
               <li>Conversation history</li>
-              <li>Email support</li>
             </ul>
-            <a href="https://app.askra.app/login" className="btn btn-primary">Get started</a>
+            <a href="https://app.askra.app/register" className="btn btn-primary">Get started</a>
           </div>
 
           <div className="pricing-card">
@@ -208,14 +206,14 @@ function App() {
             <div className="pricing-price">$79<span>/mo</span></div>
             <div className="pricing-desc">For businesses that need more</div>
             <ul className="pricing-features">
-              <li>Unlimited messages</li>
-              <li>Unlimited PDF uploads</li>
+              <li>50,000 messages per month</li>
+              <li>75 PDF uploads</li>
               <li>Full brand customization</li>
               <li>Conversation history</li>
               <li>Priority support</li>
               <li>Early access to new features</li>
             </ul>
-            <a href="https://app.askra.app/login" className="btn btn-ghost">Get started</a>
+            <a href="https://app.askra.app/register" className="btn btn-ghost">Get started</a>
           </div>
         </div>
       </section>
