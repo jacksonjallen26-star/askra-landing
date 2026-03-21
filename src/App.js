@@ -16,7 +16,7 @@ function App() {
         </div>
         <div className="nav-cta">
           <a href="https://app.askra.app/login" className="btn btn-ghost">Sign In</a>
-          <a href="https://app.askra.app/register" className="btn btn-primary">Get Started Free</a>
+          <a href="https://app.askra.app/register?plan=free" className="btn btn-primary">Get Started Free</a>
         </div>
       </nav>
 
@@ -28,7 +28,7 @@ function App() {
         <h1>Your business,<br /><span>answered instantly</span></h1>
         <p>Askra gives your website an AI-powered customer service focused chatbot that learns and uses any information you provide. Upload your documents, customize your bot, and go live in minutes.</p>
         <div className="hero-cta">
-          <a href="https://app.askra.app/register" className="btn btn-primary">Start for free</a>
+          <a href="https://app.askra.app/register?plan=free" className="btn btn-primary">Start for free</a>
           <a href="#how-it-works" className="btn btn-ghost">See how it works</a>
         </div>
 
@@ -184,7 +184,7 @@ function App() {
               <li>1 PDF upload</li>
               <li>Basic customization</li>
             </ul>
-            <a href="https://app.askra.app/register" className="btn btn-ghost">Get started free</a>
+            <a href="https://app.askra.app/register?plan=free" className="btn btn-ghost">Get started free</a>
           </div>
 
           <div className="pricing-card featured">
@@ -198,7 +198,7 @@ function App() {
               <li>Full brand customization</li>
               <li>Conversation history</li>
             </ul>
-            <a href="https://app.askra.app/register" className="btn btn-primary">Get started</a>
+            <a href="https://app.askra.app/register?plan=starter" className="btn btn-primary">Get started</a>
           </div>
 
           <div className="pricing-card">
@@ -213,7 +213,7 @@ function App() {
               <li>Priority support</li>
               <li>Early access to new features</li>
             </ul>
-            <a href="https://app.askra.app/register" className="btn btn-ghost">Get started</a>
+            <a href="https://app.askra.app/register?plan=pro" className="btn btn-ghost">Get started</a>
           </div>
         </div>
       </section>
