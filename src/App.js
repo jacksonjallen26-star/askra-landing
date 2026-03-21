@@ -16,7 +16,7 @@ function App() {
         </div>
         <div className="nav-cta">
           <a href="https://app.askra.app/login" className="btn btn-ghost">Sign In</a>
-          <a href="https://app.askra.app/login" className="btn btn-primary">Get Started Free</a>
+          <a href="https://app.askra.app/register" className="btn btn-primary">Get Started Free</a>
         </div>
       </nav>
 
@@ -28,7 +28,7 @@ function App() {
         <h1>Your business,<br /><span>answered instantly</span></h1>
         <p>Askra gives your website a smart chatbot that knows everything about your business. Upload your documents, customize your bot, and go live in minutes.</p>
         <div className="hero-cta">
-          <a href="https://app.askra.app/login" className="btn btn-primary">Start for free</a>
+          <a href="https://app.askra.app/register" className="btn btn-primary">Start for free</a>
           <a href="#how-it-works" className="btn btn-ghost">See how it works</a>
         </div>
 
