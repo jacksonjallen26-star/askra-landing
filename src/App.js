@@ -225,9 +225,6 @@ function App() {
           <span className="nav-badge">BETA</span>
         </div>
         <div className="footer-links">
-          <a href="#how-it-works">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
           <a href="https://app.askra.app/login">Sign in</a>
           <a href="https://app.askra.app/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>
         </div>
