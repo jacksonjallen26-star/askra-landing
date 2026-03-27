@@ -227,6 +227,7 @@ function App() {
         <div className="footer-links">
           <a href="https://app.askra.app/login">Sign in</a>
           <a href="https://app.askra.app/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>
+          <a href="https://app.askra.app/terms" target="_blank" rel="noreferrer">Terms of Service</a>
         </div>
         <div className="footer-copy">© 2026 Askra. All rights reserved.</div>
       </footer>
