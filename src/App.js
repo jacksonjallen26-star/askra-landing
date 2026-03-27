@@ -225,7 +225,7 @@ function App() {
           <span className="nav-badge">BETA</span>
         </div>
         <div className="footer-links">
-          <a href="mailto:jacksonjallen26@gmail.com">Contact</a>
+          <a href="https://mail.google.com/mail/?view=cm&to=jacksonjallen26@gmail.com" target="_blank" rel="noreferrer">Contact</a>
           <a href="https://app.askra.app/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>
           <a href="https://app.askra.app/terms" target="_blank" rel="noreferrer">Terms of Service</a>
         </div>
