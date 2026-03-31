@@ -663,15 +663,54 @@
     }
     .preview-content {
       flex: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
+      display: flex;
+      overflow: hidden;
+      padding: 12px 16px 16px;
+    }
+    .activity-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(10,10,15,0.5);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
       overflow: hidden;
     }
-    .chart-section {
-      padding: 14px 16px;
-      border-right: 1px solid var(--border);
+    .activity-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
     }
+    .activity-tabs {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .activity-tab {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .activity-tab.active,
+    .activity-tab:hover {
+      background: rgba(124,58,237,0.12);
+      border-color: rgba(124,58,237,0.38);
+      color: var(--purple-light);
+    }
+    .activity-convs { display: flex; flex-direction: column; gap: 6px; }
+    .activity-conv { display: none; flex-direction: column; gap: 6px; }
+    .activity-conv.active { display: flex; }
+    .activity-conv .chat-msg { opacity: 1; }
     .chart-label {
       font-size: 0.68rem;
       font-weight: 600;
@@ -1383,41 +1422,33 @@
                 </div>
               </div>
               <div class="preview-content">
-                <div class="chart-section">
-                  <div class="chart-label">Messages / day</div>
-                  <div class="bar-chart" id="bar-chart">
-                    <div class="bar" style="height:42%; animation-delay:0.05s"></div>
-                    <div class="bar" style="height:61%; animation-delay:0.1s"></div>
-                    <div class="bar" style="height:38%; animation-delay:0.15s"></div>
-                    <div class="bar" style="height:78%; animation-delay:0.2s"></div>
-                    <div class="bar" style="height:55%; animation-delay:0.25s"></div>
-                    <div class="bar" style="height:90%; animation-delay:0.3s"></div>
-                    <div class="bar" style="height:68%; animation-delay:0.35s"></div>
+                <div class="activity-section">
+                  <div class="activity-header">
+                    <span class="chat-label">Recent Activity</span>
+                    <div class="activity-tabs">
+                      <button class="activity-tab active" data-tab="0">usr_4a2f</button>
+                      <button class="activity-tab" data-tab="1">usr_7c1b</button>
+                      <button class="activity-tab" data-tab="2">usr_9e3d</button>
+                      <button class="activity-tab" data-tab="3">usr_2k8m</button>
+                    </div>
                   </div>
-                </div>
-                <div class="chat-section" id="chat-section">
-                  <div class="chat-label">Live chat</div>
-                  <div class="chat-msg user" id="chat-1">
-                    <div class="chat-bubble">What's your return policy?</div>
-                  </div>
-                  <div class="typing-indicator" id="typing-1">
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                  </div>
-                  <div class="chat-msg bot" id="chat-2">
-                    <div class="chat-bubble">We offer 30-day returns on all items. Just reach out with your order number!</div>
-                  </div>
-                  <div class="chat-msg user" id="chat-3">
-                    <div class="chat-bubble">Do you ship internationally?</div>
-                  </div>
-                  <div class="typing-indicator" id="typing-2">
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                  </div>
-                  <div class="chat-msg bot" id="chat-4">
-                    <div class="chat-bubble">Yes! We ship to 40+ countries. Rates calculated at checkout.</div>
+                  <div class="activity-convs">
+                    <div class="activity-conv active" data-conv="0">
+                      <div class="chat-msg user"><div class="chat-bubble">What are your business hours?</div></div>
+                      <div class="chat-msg bot"><div class="chat-bubble">We're open Monday–Friday, 9am to 6pm EST. Happy to help!</div></div>
+                    </div>
+                    <div class="activity-conv" data-conv="1">
+                      <div class="chat-msg user"><div class="chat-bubble">Do you offer refunds?</div></div>
+                      <div class="chat-msg bot"><div class="chat-bubble">Yes! We offer full refunds within 30 days. Just send us your order number.</div></div>
+                    </div>
+                    <div class="activity-conv" data-conv="2">
+                      <div class="chat-msg user"><div class="chat-bubble">How do I add the widget to my site?</div></div>
+                      <div class="chat-msg bot"><div class="chat-bubble">Copy the script tag from your dashboard and paste it before &lt;/body&gt;.</div></div>
+                    </div>
+                    <div class="activity-conv" data-conv="3">
+                      <div class="chat-msg user"><div class="chat-bubble">Can I upload multiple PDFs?</div></div>
+                      <div class="chat-msg bot"><div class="chat-bubble">Absolutely! Starter supports up to 10 PDFs, Pro supports up to 75.</div></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1438,11 +1469,9 @@
       <div class="marquee-item"><span class="icon">📄</span> Document training <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🔌</span> Embed anywhere <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🧠</span> GPT-4 powered <span class="dot"></span></div>
-      <div class="marquee-item"><span class="icon">🌐</span> Multi-language <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">📊</span> Real-time analytics <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🔒</span> Secure & private <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🎨</span> Fully branded <span class="dot"></span></div>
-      <div class="marquee-item"><span class="icon">⚙️</span> No-code setup <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🤝</span> Human handoff <span class="dot"></span></div>
     </div>
     <div class="marquee-group" aria-hidden="true">
@@ -1450,11 +1479,9 @@
       <div class="marquee-item"><span class="icon">📄</span> Document training <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🔌</span> Embed anywhere <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🧠</span> GPT-4 powered <span class="dot"></span></div>
-      <div class="marquee-item"><span class="icon">🌐</span> Multi-language <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">📊</span> Real-time analytics <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🔒</span> Secure & private <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🎨</span> Fully branded <span class="dot"></span></div>
-      <div class="marquee-item"><span class="icon">⚙️</span> No-code setup <span class="dot"></span></div>
       <div class="marquee-item"><span class="icon">🤝</span> Human handoff <span class="dot"></span></div>
     </div>
   </div>
@@ -1862,53 +1889,16 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
-  /* ── Bar chart animation ────────────────────────────────────────── */
-  const barObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.bar').forEach(b => b.classList.add('animated'));
-        barObserver.unobserve(e.target);
-      }
+  /* ── Activity tab switching ─────────────────────────────────────── */
+  document.querySelectorAll('.activity-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.activity-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.activity-conv').forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      const conv = document.querySelector(`.activity-conv[data-conv="${tab.dataset.tab}"]`);
+      if (conv) conv.classList.add('active');
     });
-  }, { threshold: 0.5 });
-  const barChart = document.getElementById('bar-chart');
-  if (barChart) barObserver.observe(barChart);
-
-  /* ── Chat animation ─────────────────────────────────────────────── */
-  const chatObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        runChatSequence();
-        chatObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  const chatSection = document.getElementById('chat-section');
-  if (chatSection) chatObserver.observe(chatSection);
-
-  function runChatSequence() {
-    const seq = [
-      { id: 'chat-1',   delay: 300 },
-      { id: 'typing-1', delay: 800,  remove: 1600 },
-      { id: 'chat-2',   delay: 1700 },
-      { id: 'chat-3',   delay: 2600 },
-      { id: 'typing-2', delay: 3100, remove: 4000 },
-      { id: 'chat-4',   delay: 4100 },
-    ];
-    seq.forEach(({ id, delay, remove }) => {
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.classList.add('visible');
-      }, delay);
-      if (remove) {
-        setTimeout(() => {
-          const el = document.getElementById(id);
-          if (el) el.classList.remove('visible');
-        }, remove);
-      }
-    });
-  }
+  });
 
   /* ── 3D tilt on feature cards ───────────────────────────────────── */
   if (window.matchMedia('(pointer: fine)').matches) {
